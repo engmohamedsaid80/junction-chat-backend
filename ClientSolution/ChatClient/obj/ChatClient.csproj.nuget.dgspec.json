@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workshop\\NextGames\\Source\\ClientSolution\\ChatClient\\ChatClient.csproj": {}
+    "D:\\Workshop\\Junction-2021\\Source\\ClientSolution\\ChatClient\\ChatClient.csproj": {}
   },
   "projects": {
-    "D:\\Workshop\\NextGames\\Source\\ClientSolution\\ChatClient\\ChatClient.csproj": {
+    "D:\\Workshop\\Junction-2021\\Source\\ClientSolution\\ChatClient\\ChatClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workshop\\NextGames\\Source\\ClientSolution\\ChatClient\\ChatClient.csproj",
+        "projectUniqueName": "D:\\Workshop\\Junction-2021\\Source\\ClientSolution\\ChatClient\\ChatClient.csproj",
         "projectName": "ChatClient",
-        "projectPath": "D:\\Workshop\\NextGames\\Source\\ClientSolution\\ChatClient\\ChatClient.csproj",
+        "projectPath": "D:\\Workshop\\Junction-2021\\Source\\ClientSolution\\ChatClient\\ChatClient.csproj",
         "packagesPath": "C:\\Users\\engmo\\.nuget\\packages\\",
-        "outputPath": "D:\\Workshop\\NextGames\\Source\\ClientSolution\\ChatClient\\obj\\",
+        "outputPath": "D:\\Workshop\\Junction-2021\\Source\\ClientSolution\\ChatClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
