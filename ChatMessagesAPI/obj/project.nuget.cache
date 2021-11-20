@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MhNLozwU90sACGgd6AvlXrMYwhoVCm5zy3cKGQ8lxdCBJGwp4eNySez2q76qaDJq30Oz5ZzEU0gRepFhK6raew==",
+  "dgSpecHash": "7fXtX5tXfSu5m0rk22G+PjCXlslkTGFafcGOKD1zjtLHyVajdVkZZU9x0pZ+BMuzj3jjWLmrDCcyBu7BUAJ/XQ==",
   "success": true,
-  "projectFilePath": "D:\\Workshop\\NextGames\\Source\\ChatMessagesAPI\\ChatMessagesAPI.csproj",
+  "projectFilePath": "D:\\Workshop\\Junction-2021\\Source\\ChatMessagesAPI\\ChatMessagesAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\engmo\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\engmo\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

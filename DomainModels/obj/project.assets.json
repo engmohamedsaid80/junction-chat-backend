@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj",
+      "projectUniqueName": "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\DomainCore.csproj",
       "projectName": "DomainCore",
-      "projectPath": "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj",
+      "projectPath": "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\DomainCore.csproj",
       "packagesPath": "C:\\Users\\engmo\\.nuget\\packages\\",
-      "outputPath": "D:\\Workshop\\NextGames\\Source\\DomainModels\\obj\\",
+      "outputPath": "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

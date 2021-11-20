@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workshop\\NextGames\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj": {}
+    "D:\\Workshop\\Junction-2021\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj": {}
   },
   "projects": {
-    "D:\\Workshop\\NextGames\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj": {
+    "D:\\Workshop\\Junction-2021\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workshop\\NextGames\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj",
+        "projectUniqueName": "D:\\Workshop\\Junction-2021\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj",
         "projectName": "ChatGroupsAPI",
-        "projectPath": "D:\\Workshop\\NextGames\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj",
+        "projectPath": "D:\\Workshop\\Junction-2021\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj",
         "packagesPath": "C:\\Users\\engmo\\.nuget\\packages\\",
-        "outputPath": "D:\\Workshop\\NextGames\\Source\\ChatGruopsAPI\\obj\\",
+        "outputPath": "D:\\Workshop\\Junction-2021\\Source\\ChatGruopsAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -32,11 +32,11 @@
           "netcoreapp3.0": {
             "targetAlias": "netcoreapp3.0",
             "projectReferences": {
-              "D:\\Workshop\\NextGames\\Source\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\Workshop\\NextGames\\Source\\DAL\\DAL.csproj"
+              "D:\\Workshop\\Junction-2021\\Source\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Workshop\\Junction-2021\\Source\\DAL\\DAL.csproj"
               },
-              "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj": {
-                "projectPath": "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj"
+              "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\DomainCore.csproj": {
+                "projectPath": "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\DomainCore.csproj"
               }
             }
           }
@@ -110,14 +110,14 @@
         }
       }
     },
-    "D:\\Workshop\\NextGames\\Source\\DAL\\DAL.csproj": {
+    "D:\\Workshop\\Junction-2021\\Source\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workshop\\NextGames\\Source\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Workshop\\Junction-2021\\Source\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\Workshop\\NextGames\\Source\\DAL\\DAL.csproj",
+        "projectPath": "D:\\Workshop\\Junction-2021\\Source\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\engmo\\.nuget\\packages\\",
-        "outputPath": "D:\\Workshop\\NextGames\\Source\\DAL\\obj\\",
+        "outputPath": "D:\\Workshop\\Junction-2021\\Source\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -138,8 +138,8 @@
           "netcoreapp3.0": {
             "targetAlias": "netcoreapp3.0",
             "projectReferences": {
-              "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj": {
-                "projectPath": "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj"
+              "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\DomainCore.csproj": {
+                "projectPath": "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\DomainCore.csproj"
               }
             }
           }
@@ -192,14 +192,14 @@
         }
       }
     },
-    "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj": {
+    "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\DomainCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj",
+        "projectUniqueName": "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\DomainCore.csproj",
         "projectName": "DomainCore",
-        "projectPath": "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj",
+        "projectPath": "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\DomainCore.csproj",
         "packagesPath": "C:\\Users\\engmo\\.nuget\\packages\\",
-        "outputPath": "D:\\Workshop\\NextGames\\Source\\DomainModels\\obj\\",
+        "outputPath": "D:\\Workshop\\Junction-2021\\Source\\DomainModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

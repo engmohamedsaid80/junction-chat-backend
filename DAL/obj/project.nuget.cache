@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RIcOs/kjTrKipvvqkUyRgnxlOdjXzbrwg2BtANia0jPtLdrDVZKlYdABBx6O32CXt2RdYh5Y+aaDbIdQDpSM2g==",
+  "dgSpecHash": "9mW6bNKfNTP9yESl14sS3gQU3mujQ2BJHque5XL3CCBP6pbPU/ox6mJaZ2R6kTI5cCt9QOhscskTUzWT/H8+MA==",
   "success": true,
-  "projectFilePath": "D:\\Workshop\\NextGames\\Source\\DAL\\DAL.csproj",
+  "projectFilePath": "D:\\Workshop\\Junction-2021\\Source\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\engmo\\.nuget\\packages\\microsoft.azure.cosmos\\3.5.1\\microsoft.azure.cosmos.3.5.1.nupkg.sha512",
     "C:\\Users\\engmo\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x7mP8f7MPUC5gr0jlfGohP/ZrLZCF1cqSgMRZH10p201Yn3yYKZEvbpzajuEsAIqAuzu1RO07cbGssjxk5cktA==",
+  "dgSpecHash": "Dwzdh6QZDEuFWZxfNekhqEevWyx+FLQjWZ2PvJVXxvQNrl45TcLUClaU5yvNEwzL829/nnmfGsEtjElK/lDgUA==",
   "success": true,
-  "projectFilePath": "D:\\Workshop\\NextGames\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj",
+  "projectFilePath": "D:\\Workshop\\Junction-2021\\Source\\ChatGruopsAPI\\ChatGroupsAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\engmo\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\engmo\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
