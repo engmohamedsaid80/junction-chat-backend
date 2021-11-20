@@ -2,6 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>ms-ng-chat-hub - Web Deploy</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\Workshop\Junction-2021\Source\.github\workflows\ms-ng-chat-hub.yml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

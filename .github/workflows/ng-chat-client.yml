@@ -1,10 +1,10 @@
-name: Build and deploy .NET Core application to Web App ng-chat-cient
+name: Build and deploy .NET Core application to Web App ng-chat-client
 on:
   push:
     branches:
     - master
 env:
-  AZURE_WEBAPP_NAME: ng-chat-cient
+  AZURE_WEBAPP_NAME: ng-chat-client
   AZURE_WEBAPP_PACKAGE_PATH: .\published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
@@ -30,7 +30,7 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.NG_CHAT_CIENT_FFFF }}
+        publish-profile: ${{ secrets.NG_CHAT_CLIENT_FFFF }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
