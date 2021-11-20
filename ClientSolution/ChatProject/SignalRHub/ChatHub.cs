@@ -20,19 +20,39 @@ namespace SignalRChat.SignalRHub
         string leavGroupUrl = ChatHubSettings.LEAVE_GROUP_API;
         string getGroupMessagesUrl = ChatHubSettings.GET_GROUP_MESSAGES_API;
         string sendMessageUrl = ChatHubSettings.SEND_MESSAGE_API;
-        
+        string messageGuardUrl = ChatHubSettings.MESSAGE_GUARD_API;
+
+
         public async Task SendMessageToGroup(string groupName, string message)
         {
-           
-            //return Clients.Group(groupName).SendAsync("Send", $"{Context.ConnectionId}: {message}");
+            var senderName = Context.GetHttpContext().Request.Query["UserName"];
 
-            await Clients.Group(groupName).SendAsync("SendToGroup", $"{message}", groupName, $"{Context.GetHttpContext().Request.Query["UserName"]}");
+            HttpClient messageClient = new HttpClient();
 
+            var isMessageSafe = await CallMessageGuard(messageClient, message);
+
+            if (isMessageSafe)
+            {
+                await Clients.Group(groupName).SendAsync("SendToGroup", $"{message}", groupName, $"{Context.GetHttpContext().Request.Query["UserName"]}");
+
+                await CallMessageAPI(messageClient, senderName, groupName, message);
+            }     
+            else
+            {
+                // Message is not safe
+                // 1- send private warning to sender
+                // 2- loawer sender score
+                
+            }
+        }
+
+        private async Task CallMessageAPI(HttpClient messageClient, string senderName, string groupName, string message)
+        {
             //calling send message to group API
 
             ChatMessageModel messageVM = new ChatMessageModel();
             messageVM.Content = message;
-            messageVM.SenderName = Context.GetHttpContext().Request.Query["UserName"];
+            messageVM.SenderName = senderName;
             messageVM.GroupName = groupName;
             messageVM.MessageDT = System.DateTime.Now;
 
@@ -41,8 +61,23 @@ namespace SignalRChat.SignalRHub
             var messagehttpContent = new StringContent(messagePayload, Encoding.UTF8, "application/json");
 
             var messageGroupUri = new Uri(string.Format(sendMessageUrl, string.Empty));
-            HttpClient messageClient = new HttpClient();
-            var groupResponse = await messageClient.PostAsync(messageGroupUri, messagehttpContent);
+
+            await messageClient.PostAsync(messageGroupUri, messagehttpContent);
+        }
+
+        private async Task<bool> CallMessageGuard(HttpClient messageClient, string message)
+        {
+            var messageGuardUri = new Uri(string.Format(messageGuardUrl, new { message = message }));
+            var response = await messageClient.GetAsync(messageGuardUri);
+
+            if(response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var guardResponse = JsonConvert.DeserializeObject<MessageGuardResponse>(content);
+                return guardResponse.Safe;
+            }
+
+            return false;
         }
 
         public async Task AddToGroup(string groupName)

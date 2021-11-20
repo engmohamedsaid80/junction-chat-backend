@@ -14,5 +14,6 @@ namespace SignalRChat.SignalRHub
         public static readonly string LEAVE_GROUP_API = "https://ngchatgroupsapi.azurewebsites.net/api/user/LeaveGroup";
         public static readonly string GET_GROUP_MESSAGES_API = "https://ngchatmessagesapi.azurewebsites.net/api/Message/GetGroupMessages?g=";
         public static readonly string SEND_MESSAGE_API = "https://ngchatmessagesapi.azurewebsites.net/api/Message/SendToGroup";
+        public static readonly string MESSAGE_GUARD_API = "https://ngchatmessagesapi.azurewebsites.net/api/Message/SendToGroup";
     }
 }
