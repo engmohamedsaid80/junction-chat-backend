@@ -9,6 +9,6 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>D:\Workshop\NextGames\Source\ChatGruopsAPI\Properties\PublishProfiles\ngchatgroupsapi - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\Workshop\Junction-2021\Source\.github\workflows\ngchatgroupsapi.yml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

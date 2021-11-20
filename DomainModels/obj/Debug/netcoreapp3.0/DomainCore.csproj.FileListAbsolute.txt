@@ -5,3 +5,13 @@ D:\Other\Workshop\NextGames\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCo
 D:\Other\Workshop\NextGames\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.AssemblyInfo.cs
 D:\Other\Workshop\NextGames\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.dll
 D:\Other\Workshop\NextGames\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.pdb
+D:\Workshop\Junction-2021\Source\DomainModels\bin\Debug\netcoreapp3.0\DomainCore.deps.json
+D:\Workshop\Junction-2021\Source\DomainModels\bin\Debug\netcoreapp3.0\DomainCore.dll
+D:\Workshop\Junction-2021\Source\DomainModels\bin\Debug\netcoreapp3.0\DomainCore.pdb
+D:\Workshop\Junction-2021\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.csproj.AssemblyReference.cache
+D:\Workshop\Junction-2021\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workshop\Junction-2021\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.AssemblyInfoInputs.cache
+D:\Workshop\Junction-2021\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.AssemblyInfo.cs
+D:\Workshop\Junction-2021\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.csproj.CoreCompileInputs.cache
+D:\Workshop\Junction-2021\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.dll
+D:\Workshop\Junction-2021\Source\DomainModels\obj\Debug\netcoreapp3.0\DomainCore.pdb

@@ -8,6 +8,6 @@ namespace ChatGroupsAPI
     public class TestingSettings
     {
         public static readonly string DEFAULT_COUNTRY = "FINLAND";
-        public static readonly string DEFAULT_GAME = "Roblox";
+        public static readonly string DEFAULT_GAME = "Brawl Stars";
     }
 }
