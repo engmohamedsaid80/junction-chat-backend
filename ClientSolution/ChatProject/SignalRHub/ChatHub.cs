@@ -41,8 +41,10 @@ namespace SignalRChat.SignalRHub
             {
                 // Message is not safe
                 // 1- send private warning to sender
-                // 2- loawer sender score
+                await Clients.Group(groupName).SendAsync("SendToGroup", "message is not safe", groupName, $"{Context.GetHttpContext().Request.Query["UserName"]}");
                 
+                // 2- loawer sender score
+
             }
         }
 
@@ -67,7 +69,7 @@ namespace SignalRChat.SignalRHub
 
         private async Task<bool> CallMessageGuard(HttpClient messageClient, string message)
         {
-            var messageGuardUri = new Uri(string.Format(messageGuardUrl, new { message = message }));
+            var messageGuardUri = new Uri($"{messageGuardUrl}?message={message}");
             var response = await messageClient.GetAsync(messageGuardUri);
 
             if(response.IsSuccessStatusCode)

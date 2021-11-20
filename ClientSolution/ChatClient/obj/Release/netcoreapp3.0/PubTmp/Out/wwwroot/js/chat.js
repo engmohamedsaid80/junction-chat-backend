@@ -13,6 +13,7 @@ for (var i = 0; i < url.length; i++) {
 }
 
 var url = "https://ms-ng-chat-hub.azurewebsites.net/chatHub?UserName=" + userName;
+//var url = "http://localhost:59980/chatHub?UserName=" + userName;
 const connection = new signalR.HubConnectionBuilder()
     .withUrl(url)
     .build();

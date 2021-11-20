@@ -35,11 +35,11 @@ namespace SignalRChat
             //           .AllowCredentials();
             //}));
 
-            //https://localhost:44355/   http://localhost:59981
+            //https://localhost:44355/   
             services.AddCors(options => options.AddPolicy("AllowOrigin",
            builder =>
            {
-               builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithOrigins("https://localhost:44355");
+               builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithOrigins("https://ms-ng-chat-client.azurewebsites.net/");//("https://localhost:44355");
            }));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);

@@ -43,6 +43,7 @@ D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\bin\Debug\netcoreapp3
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\bin\Debug\netcoreapp3.0\ChatClient.pdb
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\bin\Debug\netcoreapp3.0\ChatClient.Views.dll
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\bin\Debug\netcoreapp3.0\ChatClient.Views.pdb
+D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Debug\netcoreapp3.0\ChatClient.csproj.AssemblyReference.cache
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Debug\netcoreapp3.0\ChatClient.GeneratedMSBuildEditorConfig.editorconfig
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Debug\netcoreapp3.0\ChatClient.AssemblyInfoInputs.cache
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Debug\netcoreapp3.0\ChatClient.AssemblyInfo.cs
