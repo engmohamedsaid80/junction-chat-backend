@@ -84,6 +84,7 @@ namespace DomainCore
                     id = u.ToLower(),
                     UserName = u,
                     Country = country,
+                    SafeScore = 0,
                     Groups = new List<string>()
                 };
             }
@@ -91,6 +92,28 @@ namespace DomainCore
             msg = await repo.UpdateUserAsync(user);
 
             return msg;
+        }
+
+        public async Task<string> UpdateUserSafeScore(Interfaces.IDataRepo repo, string u, int safeScore)
+        {
+            string msg = "";
+            UserModel user = await repo.GetUser(u);
+
+            if (user != null)
+            {
+                user.SafeScore = safeScore;
+
+                msg = await repo.UpdateUserAsync(user);
+            }
+
+            return msg;
+        }
+
+        public async Task<string> GetUserSafeScore(Interfaces.IDataRepo repo, string u)
+        {
+            UserModel user = await repo.GetUser(u);
+
+            return (user != null) ? user.SafeScore.ToString() : "";
         }
 
         public async Task<string> JoinGroup(Interfaces.IDataRepo repo, string u, string g)

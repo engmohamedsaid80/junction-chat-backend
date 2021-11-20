@@ -8,6 +8,8 @@ namespace SignalRChat.SignalRHub
     public class ChatHubSettings
     {
         public static readonly string LOGIN_API = "https://ngchatgroupsapi.azurewebsites.net/api/user/UserLogin?user=";
+        public static readonly string USER_SCORE_API = "https://ngchatgroupsapi.azurewebsites.net/api/user/UserSafeScore?user=";
+        public static readonly string SET_USER_SCORE_API = "https://ngchatgroupsapi.azurewebsites.net/api/user/SetUserSafeScore?user=";
         public static readonly string USER_INFO_API = "https://ngchatgroupsapi.azurewebsites.net/api/user/GetUserGroups?user=";
         public static readonly string CREATE_GROUP_API = "https://ngchatgroupsapi.azurewebsites.net/api/group/CreateGroup";
         public static readonly string JOIN_GROUP_API = "https://ngchatgroupsapi.azurewebsites.net/api/user/JoinGroup";
@@ -15,5 +17,6 @@ namespace SignalRChat.SignalRHub
         public static readonly string GET_GROUP_MESSAGES_API = "https://ngchatmessagesapi.azurewebsites.net/api/Message/GetGroupMessages?g=";
         public static readonly string SEND_MESSAGE_API = "https://ngchatmessagesapi.azurewebsites.net/api/Message/SendToGroup";
         public static readonly string MESSAGE_GUARD_API = "https://ngmessageguardapi.azurewebsites.net/api/Message/CheckIntent";
+
     }
 }

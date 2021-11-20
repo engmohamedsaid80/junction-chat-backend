@@ -9,6 +9,8 @@ namespace DomainCore.Models
         public string id { get; set; }
         public string Country { get; set; }
         public string UserName { get; set; }
+
+        public int SafeScore { get; set; }
         public string SessionId { get; set; }
         public List<string> Groups { get; set; }
     }

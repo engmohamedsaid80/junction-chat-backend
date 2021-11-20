@@ -78,6 +78,30 @@ namespace ChatGroupsAPI.Controllers
             return response;
         }
 
+        [HttpGet]
+        [Route("UserSafeScore")]
+        public async Task<MessageResponse> UserSafeScore(string user)
+        {
+            CoreEngine core = new CoreEngine();
 
+            var msg = await core.GetUserSafeScore(_repo, user);
+
+            var response = new MessageResponse { Message = msg };
+
+            return response;
+        }
+
+        [HttpPut]
+        [Route("UserSafeScore")]
+        public async Task<MessageResponse> SetUserSafeScore(string user, int score)
+        {
+            CoreEngine core = new CoreEngine();
+
+            var msg = await core.UpdateUserSafeScore(_repo, user, score);
+
+            var response = new MessageResponse { Message = msg };
+
+            return response;
+        }
     }
 }

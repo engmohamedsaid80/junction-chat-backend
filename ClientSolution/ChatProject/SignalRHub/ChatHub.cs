@@ -15,6 +15,8 @@ namespace SignalRChat.SignalRHub
         
         string loginAPIUrl = ChatHubSettings.LOGIN_API;
         string userInfoUrl = ChatHubSettings.USER_INFO_API;
+        string userScoreUrl = ChatHubSettings.USER_SCORE_API;
+        string setUserScoreUrl = ChatHubSettings.SET_USER_SCORE_API;
         string createGroupUrl = ChatHubSettings.CREATE_GROUP_API;
         string joinGroupUrl = ChatHubSettings.JOIN_GROUP_API;
         string leavGroupUrl = ChatHubSettings.LEAVE_GROUP_API;
@@ -27,28 +29,35 @@ namespace SignalRChat.SignalRHub
         {
             var senderName = Context.GetHttpContext().Request.Query["UserName"];
 
-            HttpClient messageClient = new HttpClient();
+            HttpClient httpClient = new HttpClient();
 
-            var isMessageSafe = await CallMessageGuard(messageClient, message);
+            var isMessageSafe = await CallMessageGuard(httpClient, message);
+
+            var score = await GetUSerScore(httpClient, senderName);
 
             if (isMessageSafe)
             {
-                await Clients.Group(groupName).SendAsync("SendToGroup", $"{message}", groupName, $"{Context.GetHttpContext().Request.Query["UserName"]}");
+                await Clients.Group(groupName).SendAsync("SendToGroup", $"{message}", groupName, senderName, score);
 
-                await CallMessageAPI(messageClient, senderName, groupName, message);
+                await CallMessageAPI(httpClient, senderName, groupName, message);
             }     
             else
             {
                 // Message is not safe
+                score = (score != "3") ? (int.Parse(score) + 1).ToString() : "3";
+
                 // 1- send private warning to sender
-                await Clients.Group(groupName).SendAsync("SendToGroup", "message is not safe", groupName, $"{Context.GetHttpContext().Request.Query["UserName"]}");
-                
-                // 2- loawer sender score
+                await Clients.Group(groupName).SendAsync("SendToGroup", "message is not safe", groupName, senderName, score);
+
+                // 2- lower sender score
+                await SetUSerScore(httpClient, senderName, score);
+
+
 
             }
         }
 
-        private async Task CallMessageAPI(HttpClient messageClient, string senderName, string groupName, string message)
+        private async Task CallMessageAPI(HttpClient httpClient, string senderName, string groupName, string message)
         {
             //calling send message to group API
 
@@ -64,13 +73,34 @@ namespace SignalRChat.SignalRHub
 
             var messageGroupUri = new Uri(string.Format(sendMessageUrl, string.Empty));
 
-            await messageClient.PostAsync(messageGroupUri, messagehttpContent);
+            await httpClient.PostAsync(messageGroupUri, messagehttpContent);
         }
 
-        private async Task<bool> CallMessageGuard(HttpClient messageClient, string message)
+        private async Task<string> GetUSerScore(HttpClient httpClient, string user)
+        {
+            var getUserScoreuri = new Uri(string.Format(userScoreUrl + user, string.Empty));
+            var response = await httpClient.GetAsync(getUserScoreuri);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var scoreResponse = JsonConvert.DeserializeObject<UserScoreResponse>(content);
+                return scoreResponse.Score;
+            }
+
+            return null;
+        }
+
+        private async Task SetUSerScore(HttpClient httpClient, string user, string score)
+        {
+            var setUserScoreUri = new Uri(string.Format(setUserScoreUrl + user + "&score=" + score, string.Empty));
+            await httpClient.PutAsync(setUserScoreUri, null);
+        }
+
+        private async Task<bool> CallMessageGuard(HttpClient httpClient, string message)
         {
             var messageGuardUri = new Uri($"{messageGuardUrl}?message={message}");
-            var response = await messageClient.GetAsync(messageGuardUri);
+            var response = await httpClient.GetAsync(messageGuardUri);
 
             if(response.IsSuccessStatusCode)
             {
