@@ -1,0 +1,170 @@
+﻿@{
+    ViewData["Title"] = "Game Chat";
+}
+
+<script type="text/javascript" src="~/lib/signalr/signalr.js"></script>
+<script type="text/javascript" src="~/js/chat.js"></script>
+
+<div class="spinnerWrapper">
+    <img src="~/ChatStyle/images/spinner.gif" alt="">
+</div>
+
+
+<div class="topHeader">
+    <div class="row">
+        <div class="col-12">
+            <h2>Welcome @ViewBag.UserName</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <a class="button" href='@Url.Action("Index", "Home")'><span class="glyphicon glyphicon-log-out"></span>Disconnect</a>
+        </div>
+    </div>
+    <div class="row">
+        <h2></h2>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <form class="form-inline" style="display: flex;align-items: flex-end;justify-content: right;">
+                <div class="input-prepend input-append">
+
+                    <select id="groupsDL" class="form-control">
+                    </select>
+
+                    <input type="button" id="join-group" class="button" value="Join Group" onclick="JoinGroup();" />
+                </div>
+            </form>
+            <div id="divJoinError"></div>
+        </div>
+    </div>
+    <div class="row">
+        <h2></h2>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <form class="form-inline" style="display:  flex;align-items: flex-start;justify-content: left;">
+                <div class="input-prepend input-append">
+
+                    <input class="inputText" type="text" name="group-name" id="group-name" placeholder="Type a group name" />
+
+                    <input type="button" id="Add-group" class="button" value="Create Group" onclick="AddGroup();" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+    <div class="content">
+
+
+        <div class="chatWrapper">
+
+            <!-- Nav tabs -->
+            <div class="nano nav-tabsWrapper" id="sideScroll">
+                <div class=" nano-content">
+                    <ul class="nav nav-tabs" role="tablist" id="ui_Groups">
+                    </ul>
+                </div>
+            </div>
+            <!-- Tab panes -->
+            <div class="tab-content chatBox" id="chatBox">
+                <div role="tabpanel" class="tab-pane active" id="chat01">
+                    <!--End Chat Overlay Stars Here-->
+                    <div class="endChatWrapper">
+                        <div class="endChatContainer">
+                            <h3>Leave Group?</h3>
+                            <p>Are you sure you want to end this chat?</p>
+                            <div class="buttonsWrapper">
+                                <button id="cancelChat" class="button">Cancel</button>
+                                <button class="button red">Leave Group</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Chat Overlay Ends Here-->
+                    <div class="chatScroll" id="chatScroll">
+                        <div class="noMessages">
+                            <h3>Welcome To Chat Groups</h3>
+                            <p>Start joining groups or create new group!</p>
+                        </div>
+
+                        <!--Message Ends Here-->
+                    </div>
+                </div>
+
+            </div>
+            <!--cc--->
+            <div class="tab-content chatBox" style="height: 100px;">
+                <div class="chatTextarea">
+                    <textarea id="chatTextareas" class="inputTextarea" placeholder="Type Your Text Here ..."></textarea>
+                </div>
+                <div class="chatButtons">
+                    <button id="sendBtns" onclick="SendMessage();" class="sendBtn"><span></span>Send</button>
+                    <button id="endChats" onclick="LeavGroup();" class="closeBtn"><span></span>Leave Group</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <input type="hidden" id="ActiveGroup" value="" />
+        <input type="hidden" id="UserName" value="" />
+    </div>
+
+    <!doctype html>
+    <!--[if IE 8]><html lang="en" class="ie ie8"><![endif]-->
+    <!--[if IE 9]><html lang="en" class="ie ie9"><![endif]-->
+    <!--[!(IE)]><!-->
+    @*<html>*@
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/bootstrap.min.css">
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/jquery-ui.min.css">
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/jquery-ui.theme.min.css">
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/icheck.css">
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/dataTables.jqueryui.min.css">
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/nanoscroller.css">
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/cs-select.css">
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/cs-skin-slide.css">
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/jquery.dad.css">
+        <link rel="stylesheet" media="all" href="~/ChatStyle/css/main.css">
+
+        <script type="text/javascript" src="~/ChatStyle/js/jquery-3.1.0.min.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/modernizr.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/icheck.min.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/dataTables.jqueryui.min.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/jquery.nanoscroller.min.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/jquery.nestable.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/classie.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/selectFx.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/jquery.dad.js"></script>
+        <script type="text/javascript" src="~/ChatStyle/js/ui.js"></script>
+
+        <script type="text/javascript" src="~/lib/signalr/signalr.js"></script>
+        <script type="text/javascript" src="~/js/chat.js"></script>
+        <!--[if lt IE 9]><script src="../js/html5shiv.js"></script><![endif]-->
+    </head>
+
+    <div class="chatPopup popup">
+        <a href="#" id="closePopup" class="close"><span aria-hidden="true">&times;</span></a>
+        <div class="messageWrapper">
+            <div class="messageAvatar">
+                <img src="~/ChatStyle/images/defaultAvatar.png" alt="User Avatar">
+            </div>
+            <div class="messageInfo">
+                <div class="messageUser">
+                    <h3>Username</h3>
+                    <h4>@DateTime.Now.ToString("yyyy-MON-dd hh:MI:ss")</h4>
+                </div>
+                <p>Text should be here, text should be here text should be here, Text should. Text should be here, text should be here text should be here, Text should. Text should be here, text should be here text should be here, Text should.</p>
+            </div>
+        </div>
+    </div>
+

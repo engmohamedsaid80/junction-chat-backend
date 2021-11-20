@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "mCGtYuKao1WAHc81YyQoVbdULDqFb+xPabtbK+uPDv6eY3aOw/jOCGSzMwsNugp/bl3/dOxTDlQDUjFq7GkIgw==",
+  "success": true,
+  "projectFilePath": "D:\\Workshop\\NextGames\\Source\\ClientSolution\\ChatProject\\SignalRChat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\engmo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\engmo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\engmo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\engmo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\engmo\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

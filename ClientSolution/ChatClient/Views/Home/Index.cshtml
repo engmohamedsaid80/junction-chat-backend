@@ -1,0 +1,81 @@
+﻿@model ChatClient.Models.UserViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="loginWrapper">
+        <div class="loginBox">
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <h2>Connect to Chat</h2>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nickname, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nickname, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nickname, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-8 col-md-6">
+                            <input type="submit" value="Connect" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/icheck.css">
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/nanoscroller.css">
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/cs-select.css">
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/cs-skin-slide.css">
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/jquery.dad.css">
+    <link rel="stylesheet" media="all" href="~/ChatStyle/css/main.css">
+
+    <script type="text/javascript" src="~/ChatStyle/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/modernizr.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/icheck.min.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/dataTables.jqueryui.min.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/jquery.nanoscroller.min.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/jquery.nestable.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/classie.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/selectFx.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/jquery.dad.js"></script>
+    <script type="text/javascript" src="~/ChatStyle/js/ui.js"></script>
+
+    <script type="text/javascript" src="~/lib/signalr/signalr.js"></script>
+    <script type="text/javascript" src="~/js/chat.js"></script>
+    <!--[if lt IE 9]><script src="../js/html5shiv.js"></script><![endif]-->
+</head>
+
+
+@*<script src="~/lib/signalr/signalr.js"></script>
+    <script src="~/js/chat.js"></script>*@
+
+
+

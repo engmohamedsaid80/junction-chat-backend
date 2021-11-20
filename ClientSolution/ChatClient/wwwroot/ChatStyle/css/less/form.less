@@ -1,0 +1,816 @@
+	
+.inputText, .inputTextarea {
+  width: 100%;
+  padding: 5px;
+  border:1px solid @gray !important;
+  color: @darkgray !important;
+  direction: ltr;
+  resize:none;
+  height: 30px;
+  line-height: 1.5em;
+  background: @white;
+  .borderRadius;
+  .transition;
+	&.orderInput {
+		width:30px;
+		text-align: center;
+	}
+  &:focus {
+    outline:none;
+    border-color: @green !important;
+    box-shadow: 0 0 10px @midgray;
+    .transition;
+  }
+  &:read-only {
+    font-weight: bold;
+    background-color: @lightgray;
+    &.readOnly {
+      background-color: @white;
+    }
+    &:focus {
+      box-shadow:none;
+    }
+  }
+}
+.bootstrap-tagsinput {
+	width:100% !important;
+	padding-top: 6px !important;
+	padding-bottom: 1px !important;
+	.label-info {
+		background-color:@green !important;
+		font-weight: normal;
+		font-size: 1.1em;
+		margin-bottom: 5px !important;
+		display: inline-block;
+		span {
+			&:hover {
+				box-shadow: none !important;
+				color:@orange !important;
+				border-radius: 5px;
+			}
+		}
+	}
+	
+}
+.inputSelect {
+  width: 100%;
+  padding:0 5px;
+  border:1px solid @gray !important;
+  color: @darkgray !important;
+  direction: ltr;
+  resize:none;
+  height: 30px;
+  line-height: 1.5em;
+  background: @white;
+  position: relative;
+	line-height:30px;
+  z-index: 2;
+	&.multiSelect {
+		width:100% !important;
+	}
+  .borderRadius;
+  &:focus {
+    outline:none;
+    border-color: @green !important;
+    box-shadow: 0 0 10px @midgray;
+    .transition;
+  }
+}
+
+
+
+.inputText[disabled], .inputSelect[disabled], .inputTextarea[disabled] {
+  background-color: @lightgray !important;
+  color: @darkgray !important;
+  box-shadow: none !important;
+  text-shadow:none !important;
+}
+.inputTextarea {
+  vertical-align: top;
+  line-height: normal;
+  min-height: 80px;
+}
+
+.inputLabel {
+  float: left;
+  width: 100%;
+  margin-bottom: 5px;
+  direction: ltr;
+  font-weight: bold;
+  color: @green;
+}
+.fieldHint {
+	margin-top: 10px;
+	color:@midgray;
+	float: left;
+	span {
+		margin-right:5px;
+	}
+}
+
+label {
+  color: @green;
+  font-weight: bold;  
+}
+
+.checkboxWrapper {
+  float: left;
+  padding-top: 18px;
+}
+.required {
+  color: @red;
+  font-size: 1.2em;
+}
+.buttonsWrapper {
+  float: right;
+  width: 98%;
+  margin: 10px 1%;
+  &.top {
+    margin:10px 10px 0px 10px;
+    width: calc(100% - 20px);
+    float: left;
+  }
+  .button {
+    float: right;
+    margin-left: 5px;
+  }
+}
+
+.fieldsGroup {
+  float: left;
+  width: 100%;
+  h3 {
+    float: left;
+    width: 97%;
+    direction: ltr;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    border-bottom: 1px solid @midgray;
+    padding-bottom: 20px;
+    color: @midgray;
+  }
+}
+
+.fieldsWrapper {
+  margin: 5px  0;
+  position: relative;
+  height: 60px;
+  &.inlineWrapper {
+    height: 30px;
+  }
+}
+
+.button {
+  padding: 5px 10px !important;
+  background: @midgray !important;
+  color: @white !important;
+  border:none;
+  display: inline-block;
+  font-size: 1.1em !important;
+  .borderRadius;
+  .transition;
+  &.pull-right + .button.pull-right {
+    margin-right: 10px;
+  }
+  &:focus {
+    color:@white !important;
+    text-decoration: none;
+  }
+  &:hover {
+    color: @white !important;
+		background-color:@darkgray !important;
+    .transition;
+  }
+  span {
+    float: left;
+    margin-right: 5px;
+		background-color:transparent !important;
+  }
+  &.green {
+    background-color: @green !important; 
+		&:hover {
+			background-color:@darkgreen !important;
+		}
+  }
+  &.red {
+    background-color: @red !important;
+		&:hover {
+			background-color:@darkred !important;
+		}
+  }
+  &.gray {
+    background-color: @lightgray !important;
+    color: @darkgray !important;
+  }
+  &.disabled {
+    background: rgba(181,181,181,1) !important;
+    color: @white;
+    border:none;
+    display: inline-block;
+    cursor: default;
+      &:focus {
+        color:@white;
+        text-decoration: none;
+      }
+      &:hover {
+        background: rgba(181,181,181,1) !important;
+        color: @white;
+        border-bottom: 1px solid #818181;
+        border-top:1px solid #dadada;
+        text-shadow:1px 1px 1px #818181;        
+      }    
+  }
+}
+
+.textareaWrapper {
+  min-height: 100px;
+}
+.hasError {
+  label {
+    color: @red;
+  }
+  input, select, textarea {
+    border:1px solid @red !important;
+  }
+}
+
+.witherror {
+  border:1px solid @red !important;
+}
+
+.deleteIconBtn {
+  color: @darkgray;
+  span {
+    font-size: 1.2em;
+    color: @red;
+    margin-right: 5px;
+    margin-top: -5px;
+    display: inline-block;
+  }
+}
+
+.infoToolTip {
+  position: absolute;
+  top: 13px;
+  right: -5px;
+  color: @darkblue;
+  font-size: 1.2em;
+}
+.infoToolTip + .tooltip {
+  min-width: 140px;
+}
+
+.icheckbox_square-orange, .iradio_square-orange {
+  margin-right: 5px;
+}
+
+
+.dateIcon {
+  background:url(../images/calendarIcon.png);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 27px;
+  right: 23px;
+  z-index: 10;
+}
+
+.formTitle {
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: @blue;
+}
+
+.separator {
+  float: left;
+  width: 10px;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-top: 12px;
+}
+
+.form {
+  fieldset {
+    float: left;
+    width: calc(100% - 40px);
+    border: 1px solid @gray;
+    margin: 0 20px 20px;
+    padding:10px 5px 5px;
+    position: relative;
+    &.updateStatusWrapper {
+      background-color: @lightblue;
+    }
+  }
+  legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: @green;
+    border: none;
+    width: auto;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}
+
+.globalMessages {
+  margin: 10px;
+  p {
+    padding: 20px;
+    margin-bottom: 10px;
+    .borderRadius;
+    strong {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+.attachments {
+  float: left;
+  width: 100%;
+  direction: ltr;
+  li {
+    float: left;
+    position: relative;
+    width: 100%;
+    background-color: @lightgray;
+    padding:10px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    p {
+      float: left;
+      width: 58%;
+      margin-right: 2%;
+      line-height: 1.2em;
+      span {
+        float: left;
+        margin-right: 10px;
+        width: auto;
+      }
+    }
+    h4 {
+      float: left;
+      width: 30%;
+      span {
+        float: left;
+        color: @darkgray;
+        width: auto;
+        display: inline-block;
+        margin-right: 10px;
+      }
+			.inputText {
+				width:96%;
+			}
+    }
+    span {
+      float: left;
+      width: 20%;
+      text-align: center;
+      color: @gray;
+      &.size, &.date {
+        direction: ltr;
+      }
+      &.action {
+        float: right;
+        width: 10%;
+        position: absolute;
+        margin-top: -10px;
+        right: 20px;
+        top: 50%;
+      }
+    }
+  }
+}
+
+
+.deleteIcon {
+  float: right;
+  span {
+    color: @red !important;
+    &:hover {
+      color:@darkred;
+    }  
+  }
+  
+}
+.editIcon {
+  float: right;
+  margin-right: 20px;
+  span {
+    color: @orange !important;
+    &:hover {
+      color:@darkblue;
+    }  
+  }
+  
+}
+
+
+.inputFile {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    &.button {
+      span {
+        color: @white;
+      }
+    }
+}
+.inputFile input.upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.attachmentBtn {
+  float: left;
+  font-size: 1.2em;
+}
+
+.spinner {
+  position: absolute;
+  left: -60px;
+  top: 6px;
+  background-color: @white;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  border-radius: 100px;
+  background-image: url(../images/spinner.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../images/loading.gif') 50% 50% no-repeat rgba(249,249,249,0.5);
+}
+div[title="People Picker"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #bcbec0 !important;
+  color: #1d1d1d !important;
+  direction: ltr;
+	text-align:left;
+  resize: none;
+  height: 40px;
+  line-height: 1.5em;
+  background: #ffffff;
+  border-radius: 5px;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+}
+
+
+.fieldWrapper  {
+  margin-bottom: 10px;
+}
+
+
+.iconButton {
+  float: right;
+  margin:0 0 0 5px !important;
+  line-height: 30px !important;
+  span {
+    text-align: center;
+    background-color: transparent !important;
+    width: auto;
+    padding: 0;
+    .borderRadius;
+    &::before {
+      text-align:center;
+      background-color: transparent !important;
+      color: @darkgray;
+      font-size: 0.8em;
+      top: 90% !important; 
+    }
+  }
+  small {
+    margin-right: 5px;
+  }
+  &.edit {
+    span {
+      color: @orange;
+    }
+  }
+  &.activate {
+    span {
+      color: @green;
+    }
+  }
+  &.delete {
+    span {
+      color: @red;
+    }
+  }
+	&.disabled {
+		cursor:default;
+		small {
+			color:@midgray !important;		
+		}
+		&:hover, &:focus {
+			span {
+				-webkit-transform: none !important;
+				-moz-transform: none !important;
+				transform:  none !important;
+			}
+		}
+	}
+	&.inactive {
+		span {
+			color:@gray !important;
+		}
+	}
+}
+
+
+.icheckbox_square-green+ label {
+  margin-left: 5px;
+}
+
+.buttonsWrapper {
+	&.lBtns {
+		margin-top: 0;
+		a {
+			float:left !important;
+			margin: 0 !important;
+		}
+	}
+	.glyphicon {
+		margin-right:5px;
+	}
+  .green {
+    margin:0 0 0 10px !important;
+    float: right;
+    span {
+      background-color: @green;
+      color: @white !important;
+      &::before {
+        background-color:@darkgreen !important;
+        color: @white !important;
+        text-align:center;
+      }
+    }
+		&:hover {
+			span {
+				background-color:@darkgreen;
+				.transition;
+			}
+		}
+  }
+	.orange {
+    margin:0 0 0 10px !important;
+    float: right;
+    span {
+      background-color: @orange;
+      color: @white !important;
+      &::before {
+        background-color:@midorange !important;
+        color: @white !important;
+        text-align:center;
+      }
+    }
+		&:hover {
+			span {
+				background-color:@midorange;
+				.transition;
+			}
+		}
+  }
+	.red {
+    margin:0 0 0 10px !important;
+    float: right;
+    span {
+      background-color: @red;
+      color: @white !important;
+      &::before {
+        background-color:@darkred !important;
+        color: @white !important;
+        text-align:center;
+      }
+    }
+		&:hover {
+			span {
+				background-color:@darkred;
+			}
+		}
+  }
+  .gray {
+    margin:0 0 0 10px !important;
+    float: right;
+    span {
+      background-color: @midgray;
+      color: @white !important;
+      &::before {
+        background-color:@darkgray !important;
+        color: @white !important;
+        text-align:center;
+      }
+    }
+		&:hover {
+			span {
+				background-color:@darkgray;
+			}
+		}
+  }  
+	
+	.disabled {
+    margin:0 0 0 10px !important;
+    float: right;
+		cursor:default;
+		&:hover, &:focus {
+			span {
+				-webkit-transform: none !important;
+				-moz-transform: none !important;
+				transform:  none !important;
+			}
+		}
+    span {
+      background-color: @midgray !important;
+      color: @white !important;
+      &::before {
+        background-color:@darkgray !important;
+        color: @white !important;
+        text-align:center;
+				display:none
+      }
+    }
+	}
+	
+}
+
+.inputSearch {
+	float:left;
+	width:40%;
+	table {
+		width:100%;
+	}
+}
+
+.checkboxWrapper {
+	cursor:pointer;
+	padding:18px 10px 0 10px;
+	span {
+		display:inline-block;
+		padding:10px;	
+		width:100%;
+	}
+	&.highlighted {
+		&:hover, &.selected {
+			span { 
+				background-color:@lightorange;
+				label {
+					cursor:pointer;
+				}
+			}
+		}
+	}
+}
+
+
+.disabledArea {
+	background-color:rgba(255,255,255,0.8);
+	width:97%;
+	position:absolute;
+	height:100%;
+	z-index:3;
+	display:none;
+}
+.disabled  {
+	.disabledArea {
+		display:block !important;
+	}
+}
+
+
+.ms-cui-groupBody input[type=text] {
+	height: 19px !important;
+}
+.ms-cui-dd-arrow-button {
+	padding: 0 10px !important;
+}
+
+
+.iconbtn {
+	font-size: 1.5em;
+	.transition;
+	&.green {
+		color: @green;
+	}
+	&:hover {
+		transform: scale(1.4);
+		transform-origin: center center;
+		.transition;
+	}
+	&.gray {
+		color: @darkgray;
+	}
+}
+
+.smallBtn {
+	float:right;
+	padding: 5px 7px;
+	top:-5px;
+	right:0;
+	position: absolute;
+	small {
+		color: @white;
+		font-size: 0.9em;
+		font-weight: normal !important;
+	}
+	&.green {
+		background-color:@green;
+	}
+	&.red {
+		background-color:@red;
+	}
+}
+
+
+
+.cl-effect-2 { 
+	a {
+		span {
+			display:inline-block;
+			padding: 0px 15px;
+			.transition;
+		}
+		&:hover, &:focus, &:active {
+			color: @white !important;
+			.transition;
+			
+		}
+	}
+}
+
+.dd-item > button::before {
+	font-size: 0 !important;
+	text-indent: -1000px !important;
+	width:1px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#rtePasteFlyout {
+	display: none !important;
+}
+
+.close {
+	&:hover, &:focus {
+		outline:none;
+	}
+}
+
+.select2-container {
+	width:100% !important;
+}
+
+.floatingBtnsWrapper {
+	position: absolute;
+	top: 13px;
+	right: 30px;
+	.floatingBtn {
+		float: left;
+		margin-left: 10px;
+		padding: 8px 10px;
+		&.delete {
+			color:@white;
+			background-color: @red;
+			.transition;
+			&:hover {
+				background-color: @darkred;
+				margin-top: 2px;
+				.transition;
+			}
+		}
+		&.edit {
+			color:@white;
+			background-color:@orange;
+			.transition;
+			&:hover {
+				background-color:@midorange;
+				margin-top: 2px;
+				.transition;
+			}
+		}
+	}
+}

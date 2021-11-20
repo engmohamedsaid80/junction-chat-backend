@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "XIxYsnsGZJCfFnDC3Ls6N1gbPlDGogH0CA4SlAxtiAG6zUnSYsy7h2xS47CuV14W1U50HbqngL6gA43iwlbU8A==",
+  "success": true,
+  "projectFilePath": "D:\\Workshop\\NextGames\\Source\\DomainModels\\DomainCore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\engmo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\engmo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\engmo\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

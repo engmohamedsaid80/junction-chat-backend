@@ -1,0 +1,13 @@
+D:\Other\Workshop\NextGames\Source\DAL\bin\Release\netcoreapp3.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+D:\Other\Workshop\NextGames\Source\DAL\bin\Release\netcoreapp3.0\Cosmos.CRTCompat.dll
+D:\Other\Workshop\NextGames\Source\DAL\bin\Release\netcoreapp3.0\DAL.deps.json
+D:\Other\Workshop\NextGames\Source\DAL\bin\Release\netcoreapp3.0\DAL.dll
+D:\Other\Workshop\NextGames\Source\DAL\bin\Release\netcoreapp3.0\DAL.pdb
+D:\Other\Workshop\NextGames\Source\DAL\bin\Release\netcoreapp3.0\DomainCore.dll
+D:\Other\Workshop\NextGames\Source\DAL\bin\Release\netcoreapp3.0\DomainCore.pdb
+D:\Other\Workshop\NextGames\Source\DAL\obj\Release\netcoreapp3.0\DAL.csprojAssemblyReference.cache
+D:\Other\Workshop\NextGames\Source\DAL\obj\Release\netcoreapp3.0\DAL.AssemblyInfoInputs.cache
+D:\Other\Workshop\NextGames\Source\DAL\obj\Release\netcoreapp3.0\DAL.AssemblyInfo.cs
+D:\Other\Workshop\NextGames\Source\DAL\obj\Release\netcoreapp3.0\DAL.csproj.CopyComplete
+D:\Other\Workshop\NextGames\Source\DAL\obj\Release\netcoreapp3.0\DAL.dll
+D:\Other\Workshop\NextGames\Source\DAL\obj\Release\netcoreapp3.0\DAL.pdb
