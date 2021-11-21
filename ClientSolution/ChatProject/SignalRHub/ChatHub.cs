@@ -94,7 +94,7 @@ namespace SignalRChat.SignalRHub
         private async Task SetUSerScore(HttpClient httpClient, string user, string score)
         {
             var setUserScoreUri = new Uri(string.Format(setUserScoreUrl + user + "&score=" + score, string.Empty));
-            await httpClient.PutAsync(setUserScoreUri, null);
+            await httpClient.GetAsync(setUserScoreUri);
         }
 
         private async Task<bool> CallMessageGuard(HttpClient httpClient, string message)

@@ -56,13 +56,13 @@ connection.on("SendToGroup", function (message, group, senderName, safeScore) {
 
     switch (safeScore) {
         case "1":
-            score = "<i class='fas fa-exclamation-triangle' style='color:yellow'></i>";
+            score = "<img alt='Warning' src='/ChatStyle/images/w1.png' width='20' height='20'>";
             break;
         case "2":
-            score = "<i class='fas fa-exclamation-triangle' style='color:red'></i>";
+            score = "<img alt='Second Warning' src='/ChatStyle/images/w2.png' width='20' height='20'>";
             break;
         case "3":
-            score = "<i class='fas fa-skull-crossbones' style='color:red'></i>";
+            score = "<img alt='Suspended' src='/ChatStyle/images/w3.png' width='20' height='20'>";
             break;
         default:
             score = '';
