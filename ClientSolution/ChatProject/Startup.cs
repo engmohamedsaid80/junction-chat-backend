@@ -39,8 +39,8 @@ namespace SignalRChat
             services.AddCors(options => options.AddPolicy("AllowOrigin",
            builder =>
            {
-               //builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithOrigins("https://ms-ng-chat-client.azurewebsites.net/");
-               builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithOrigins("https://localhost:44355");
+               builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithOrigins("https://ms-ng-chat-client.azurewebsites.net/");
+               //builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().WithOrigins("https://localhost:44355");
            }));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
