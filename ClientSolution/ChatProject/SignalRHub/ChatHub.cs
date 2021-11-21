@@ -84,8 +84,8 @@ namespace SignalRChat.SignalRHub
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsStringAsync();
-                var scoreResponse = JsonConvert.DeserializeObject<UserScoreResponse>(content);
-                return scoreResponse.Score;
+                var scoreResponse = JsonConvert.DeserializeObject<APIMessageResponse>(content);
+                return scoreResponse.Message;
             }
 
             return null;

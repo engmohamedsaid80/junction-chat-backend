@@ -91,8 +91,8 @@ namespace ChatGroupsAPI.Controllers
             return response;
         }
 
-        [HttpPut]
-        [Route("UserSafeScore")]
+        [HttpGet]
+        [Route("SetUserSafeScore")]
         public async Task<MessageResponse> SetUserSafeScore(string user, int score)
         {
             CoreEngine core = new CoreEngine();

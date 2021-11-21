@@ -47,14 +47,30 @@ connection.on("JoinGroupTab", function (groupName) {
         $("#" + AnchorId).trigger("click");
 });
 
-connection.on("SendToGroup", function (message,group, senderName) {
+connection.on("SendToGroup", function (message, group, senderName, safeScore) {
     //var li = document.createElement("li");
     //li.textContent = message;
     //document.getElementById("messagesList").appendChild(li);
 
+    var score = '';
+
+    switch (safeScore) {
+        case "1":
+            score = "<i class='fas fa-exclamation-triangle' style='color:yellow'></i>";
+            break;
+        case "2":
+            score = "<i class='fas fa-exclamation-triangle' style='color:red'></i>";
+            break;
+        case "3":
+            score = "<i class='fas fa-skull-crossbones' style='color:red'></i>";
+            break;
+        default:
+            score = '';
+    }
+
     var chatMessage = "<div class='messageWrapper'><div class='messageAvatar'>" +
         "<img src='/ChatStyle/images/defaultAvatar.png' alt='User Avatar'></div>" +
-        "<div class='messageInfo'><div class='messageUser'><h3>" + senderName+"</h3>"+
+        "<div class='messageInfo'><div class='messageUser'><h3>" + senderName + score + "</h3>" +
         "</div><p>" +  message +"</p></div></div>";
     var chatScrollId = "chatScroll_" + group;
     $("#" + chatScrollId).append(chatMessage);
