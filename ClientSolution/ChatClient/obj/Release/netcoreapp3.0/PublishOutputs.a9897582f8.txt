@@ -36,8 +36,12 @@ D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreap
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\images\bg.png
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\images\defaultAvatar.png
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\images\logo-color.png
+D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\images\logo-new.png
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\images\spinner.gif
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\images\spinnerLarge.gif
+D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\images\w1.png
+D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\images\w2.png
+D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\images\w3.png
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\js\bootstrap-tagsinput.js
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\js\bootstrap.min.js
 D:\Workshop\Junction-2021\Source\ClientSolution\ChatClient\obj\Release\netcoreapp3.0\PubTmp\Out\wwwroot\ChatStyle\js\c3.min.js

@@ -35,7 +35,7 @@ namespace SignalRChat.SignalRHub
 
             var score = await GetUSerScore(httpClient, senderName);
 
-            if (isMessageSafe)
+            if (isMessageSafe && score != "3")
             {
                 await Clients.Group(groupName).SendAsync("SendToGroup", $"{message}", groupName, senderName, score);
 
@@ -44,13 +44,20 @@ namespace SignalRChat.SignalRHub
             else
             {
                 // Message is not safe
-                score = (score != "3") ? (int.Parse(score) + 1).ToString() : "3";
+                if (score != "3")
+                {
+                    score = (score != "3") ? (int.Parse(score) + 1).ToString() : "3";
 
-                // 1- send private warning to sender
-                await Clients.Group(groupName).SendAsync("SendToGroup", "message is not safe", groupName, senderName, score);
+                    // 1- send private warning to sender
+                    await Clients.Group(groupName).SendAsync("SendToGroup", "message is not safe", groupName, senderName, score);
 
-                // 2- lower sender score
-                await SetUSerScore(httpClient, senderName, score);
+                    // 2- lower sender score
+                    await SetUSerScore(httpClient, senderName, score);
+                }
+                else
+                {
+                    await Clients.Group(groupName).SendAsync("SendToGroup", "this user is suspended", groupName, senderName, score);
+                }
 
 
 
